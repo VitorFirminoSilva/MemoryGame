@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/game.css">
+
+    <link rel="stylesheet" href="./css/animation.css">
+
+    <link rel="shortcut icon" href="./img/brain.png" type="image/x-icon">
+    <title>Memory Game</title>
+</head>
+<body>
+
+    <form class="login_form disabled">
+        <div class="login_header">
+            <img src="./img/brain.png" alt="Brain icon">
+            <h1>Memory Game</h1>
+         
+        </div>
+        <input type="text" placeholder="Name" class="login_input">
+        <button type="submit" class="login_button" disabled>Play</button>
+    </form>
+
+    <main>
+        <header>
+            <span class="player"></span>
+            <span>Tempo: <span class="timer">00</span></span>
+        </header>
+        <div class="grid"></div>
+    </main>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/game.js"></script>
+</body>
+</html>
