@@ -8,8 +8,15 @@ const images = [
     "Beatless",
     "Boku_no_hero",
     "Boruto",
-    "charlotte"
+    "charlotte",
+    "clannad",
+    "Code",
+    "drag",
+    "DxD",
+    "elf",
+    "full",
 ];
+
 
 let firstCard = "";
 let secondCard = "";
@@ -112,7 +119,7 @@ const startTimer = () => {
     }, 1000);
 }
 
-window.onload = () => {
+const startGame = () => {
 
     const playerName = localStorage.getItem("player");
     startTimer();

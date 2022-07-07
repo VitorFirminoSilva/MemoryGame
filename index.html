@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/game.css">
 
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/animation.css">
 
     <link rel="shortcut icon" href="./img/brain.png" type="image/x-icon">
@@ -17,7 +18,13 @@
 </head>
 <body>
 
-    <form class="login_form disabled">
+    <!-- <noscript>
+        <div>
+          Seu navegador de internet está sem suporte à JavaScript. Por esse motivo algumas funcionalidades do site podem não estar acessíveis.
+        </div>
+    </noscript> -->
+
+    <form class="login_form">
         <div class="login_header">
             <img src="./img/brain.png" alt="Brain icon">
             <h1>Memory Game</h1>
@@ -27,7 +34,7 @@
         <button type="submit" class="login_button" disabled>Play</button>
     </form>
 
-    <main>
+    <main class="game disabled">
         <header>
             <span class="player"></span>
             <span>Tempo: <span class="timer">00</span></span>
@@ -35,7 +42,7 @@
         <div class="grid"></div>
     </main>
 
-    <script src="./js/login.js"></script>
     <script src="./js/game.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 </html>

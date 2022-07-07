@@ -1,6 +1,7 @@
 const input = document.querySelector(".login_input");
 const button = document.querySelector(".login_button");
 const form = document.querySelector(".login_form");
+const game = document.querySelector(".game");
 const isHidden = () => form.classList.contains("submit");
 
 const validateInput = ({target}) => {
@@ -24,6 +25,9 @@ const hiddenForm = (event) => {
         console.log("Alo Romario");
         form.classList.remove("submit");
         form.classList.add("disabled");
+
+        startGame();
+        game.classList.remove("disabled");
     }
 }
 
