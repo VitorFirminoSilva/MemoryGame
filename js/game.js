@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 const spanPlayer = document.querySelector(".player");
+const spanTries = document.querySelector(".tries");
 const spanTimer = document.querySelector(".timer");
 
 const images = [
@@ -21,12 +22,17 @@ const images = [
 let firstCard = "";
 let secondCard = "";
 let lenghtGame = 0;
+let tryCards = 0;
+
+let seconds = 0;
+let minutes = 0;
+let str = '';
 
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll(".disabled_card");
     
     if(disabledCards.length === lenghtGame){
-        console.log("Acabou as cartas!! em: " + timer + " segundos");
+        console.log("Acabou as cartas!! em " + str );
         clearInterval(this.loop);
     }
 }
@@ -35,15 +41,16 @@ const checkCards = () => {
     const firstElement = firstCard.getAttribute("data-element");
     const secondElement = secondCard.getAttribute("data-element");
 
+    tryCards++;
+    spanTries.innerHTML = "Tries: " + tryCards;
+
     if(firstElement === secondElement){
         firstCard.firstChild.classList.add("disabled_card");
         secondCard.firstChild.classList.add("disabled_card");
         
         firstCard = "";
         secondCard = "";
-
-        checkEndGame()
-    
+        checkEndGame();
     }else{
         setTimeout( () => {
             firstCard.classList.remove("reveal_card");
@@ -67,8 +74,6 @@ const revealCard = ({target}) => {
         target.parentNode.classList.add("reveal_card");
         checkCards();
     }
-
-
 }
 
 const createElement = (tag, className) => {
@@ -110,12 +115,32 @@ const loadGame = () => {
     });
 }
 
-var timer = 0;
-
 const startTimer = () => {
     this.loop = setInterval(() => {
-        timer ++;
-        spanTimer.innerHTML = timer;
+        
+        seconds ++;
+
+        if(seconds > 60){
+            minutes++;
+            seconds = 0;
+        }
+
+        if(minutes < 10){
+            str = "0" + minutes;
+        }
+        else{
+            str = minutes; 
+        }
+
+
+        if(seconds < 10){
+            str += ":0" + seconds;
+        }
+        else{
+            str += ":" + seconds; 
+        }
+
+        spanTimer.innerHTML = str;
     }, 1000);
 }
 
@@ -124,5 +149,6 @@ const startGame = () => {
     const playerName = localStorage.getItem("player");
     startTimer();
     spanPlayer.innerHTML = "Name:" + playerName;
+    spanTries.innerHTML = "Tries: " + tryCards;
     loadGame();
 }
