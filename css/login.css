@@ -1,3 +1,7 @@
+section.disabled{
+    display: none;
+}
+
 .login_form{
     display: flex;
     align-items: center;
@@ -15,12 +19,8 @@
     
 }
 
-.login_form.submit{
+.login_form.submited{
     animation: login 0.4s forwards;
-}
-
-.login_form.disabled{
-    display: none;
 }
 
 .login_header img{

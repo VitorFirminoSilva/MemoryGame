@@ -4,18 +4,18 @@ const spanTries = document.querySelector(".tries");
 const spanTimer = document.querySelector(".timer");
 
 const images = [
-    "91_days",
-    "accel",
-    "Beatless",
-    "Boku_no_hero",
-    "Boruto",
-    "charlotte",
-    "clannad",
-    "Code",
-    "drag",
-    "DxD",
-    "elf",
-    "full",
+    "image1",
+    "image2",
+    "image3",
+    "image4",
+    "image5",
+    "image6",
+    "image7",
+    "image8",
+    "image9",
+    "image10",
+    "image11",
+    "image12",
 ];
 
 
@@ -27,6 +27,8 @@ let tryCards = 0;
 let seconds = 0;
 let minutes = 0;
 let str = '';
+
+const theme = "owlTheme";
 
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll(".disabled_card");
@@ -88,7 +90,7 @@ const createCard = (image) => {
     const front = createElement("div", "face front");
     const back = createElement("div", "face back");
 
-    front.style.backgroundImage = `url(../img/${image}.jpg)`;
+    front.style.backgroundImage = `url(../img/${theme}/${image}.jpg)`;
     card.appendChild(front);
     card.appendChild(back);
 

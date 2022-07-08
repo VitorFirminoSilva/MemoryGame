@@ -1,3 +1,9 @@
+@media (max-width: 800px){
+    main{
+        background-color: var(--dark-color);
+    }
+}
+
 @media (max-width: 1200px) {
     html{
         font-size: 38.5%;
