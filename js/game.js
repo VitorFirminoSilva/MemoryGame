@@ -2,6 +2,7 @@ const grid = document.querySelector(".grid");
 const spanPlayer = document.querySelector(".player");
 const spanTries = document.querySelector(".tries");
 const spanTimer = document.querySelector(".timer");
+const main = document.querySelector(".game");
 
 const images = [
     "image1",
@@ -91,6 +92,7 @@ const createCard = (image) => {
     const back = createElement("div", "face back");
 
     front.style.backgroundImage = `url(../img/${theme}/${image}.jpg)`;
+    back.style.backgroundImage = `url(../img/${theme}/backcard.jpg)`;
     card.appendChild(front);
     card.appendChild(back);
 
@@ -150,6 +152,7 @@ const startGame = () => {
 
     const playerName = localStorage.getItem("player");
     theme = localStorage.getItem("theme");
+    main.style.backgroundImage = `url(../img/${theme}/background.jpg)`;
     loadGame();
     startTimer();
     spanPlayer.innerHTML = "Name:" + playerName;

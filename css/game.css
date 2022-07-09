@@ -3,11 +3,11 @@ main{
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background-image: url(../img/background.jpg);
     background-size: cover;
     align-items: center;
     padding: 20px 20px 50px;
 }
+
 main.disabled{
     display: none;
 }
@@ -67,7 +67,6 @@ header{
 
 .back{
     border: 2px solid var(--grey-color);
-    background-image: url(../img/backcard.jpg);
 }
 
 .reveal_card{
