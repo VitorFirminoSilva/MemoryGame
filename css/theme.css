@@ -1,0 +1,65 @@
+section.theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-grey-color);
+}
+
+section.theme.disabled{
+    display: none;
+}
+
+.themes_cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    max-width: 1024px;
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+    padding: 20px;    
+}
+
+.theme_card{
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: inline-block;
+    border-radius: 6px;
+    transition: all 1s ease;
+
+    animation: card_theme .4s; 
+}
+
+.theme_card:hover{
+    transform: translateY(-10px);
+}
+
+.face_card{
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden; 
+    border-radius: 6px;
+    transition: all 3s ease;
+    
+}
+
+.theme_text {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.theme_text span{
+    font-size: 1.8rem;
+    
+}
+
+
+
+/* Theme images */
+
+.owlTheme{
+    background-image: url(../img/owlTheme/tumb.jpg);
+}

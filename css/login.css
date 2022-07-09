@@ -2,6 +2,10 @@ section.disabled{
     display: none;
 }
 
+section.login {
+    background-color: var(--light-grey-color);
+}
+
 .login_form{
     display: flex;
     align-items: center;

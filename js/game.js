@@ -26,9 +26,9 @@ let tryCards = 0;
 
 let seconds = 0;
 let minutes = 0;
-let str = '';
+let str = "";
 
-const theme = "owlTheme";
+let theme = "";
 
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll(".disabled_card");
@@ -149,8 +149,10 @@ const startTimer = () => {
 const startGame = () => {
 
     const playerName = localStorage.getItem("player");
+    theme = localStorage.getItem("theme");
+    loadGame();
     startTimer();
     spanPlayer.innerHTML = "Name:" + playerName;
     spanTries.innerHTML = "Tries: " + tryCards;
-    loadGame();
+    
 }
