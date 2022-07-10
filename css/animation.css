@@ -1,6 +1,6 @@
 @keyframes login{
     100%{
-        transform: translateX(5px);
+        transform: translateX(2px);
         opacity: 0;
     }
 }

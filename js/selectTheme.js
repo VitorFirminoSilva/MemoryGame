@@ -1,9 +1,9 @@
 const theme_card = document.querySelectorAll(".theme_card");
 
 const themes = [
-    "owlTheme",
+    "desenhos",
     "sportCar",
-    "theme3",
+    "animes",
     "theme4"
 ]
 
@@ -17,7 +17,7 @@ const selectionTheme = ({target}) => {
     if(themes.includes(theme)){
         localStorage.setItem("theme", theme);
     }else{
-        localStorage.setItem("theme", "owlTheme");
+        localStorage.setItem("theme", "desenhos");
     }
 
     selectTheme.classList.add("disabled");

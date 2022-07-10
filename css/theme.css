@@ -12,7 +12,7 @@ section.theme.disabled{
 
 .themes_cards{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     max-width: 1024px;
     gap: 20px;
     width: 100%;
@@ -60,11 +60,15 @@ section.theme.disabled{
 
 /* Theme images */
 
-.owlTheme{
-    background-image: url(../img/owlTheme/tumb.jpg);
+.desenhos{
+    background-image: url(../img/desenhos/tumb.jpg);
 }
 
 .sportCar{
     background-image: url(../img/sportCar/tumb.jpg);
+}
+
+.animes{
+    background-image: url(../img/animes/tumb.jpg);
 }
 
