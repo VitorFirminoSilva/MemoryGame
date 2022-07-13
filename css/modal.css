@@ -13,9 +13,9 @@
 /* Modal Content/Box */
 .modal_content {
     position: relative;
-    background-color: #fefefe;
+    background-color: var(--light-grey-color);
     margin: auto;
-    border: 1px solid #888;
+    border: 1px solid var(--grey-color);
     border-radius: 5px;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -35,8 +35,8 @@
     display: flex;
     justify-content: center;
     padding: 10px 20px;
-    background-color: #5cb85c;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--light-color);
 }
 
 /* Modal Body */
@@ -53,27 +53,25 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-
-/* The Close Button */
-.close_modal {
-    color: var(--light-grey-color);
-    float: right;
-    font-size: 2.4rem;
-    font-weight: bold;
-}
-
-.close_modal:hover,
-.close_modal:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--light-color);
 }
 
 .icon_reload, .icon_change{
     font-size: 2.4rem;
     padding: 6px;
+}
+
+.icon_reload:hover,
+.icon_reload:focus {
+    color: var(--dark-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon_change:hover,
+.icon_change:focus {
+    color: var(--dark-color);
+    text-decoration: none;
+    cursor: pointer;
 }
