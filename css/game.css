@@ -1,4 +1,4 @@
-main{
+section.game{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -8,7 +8,7 @@ main{
     padding: 20px 20px 50px;
 }
 
-main.disabled{
+section.game.disabled{
     display: none;
 }
 
@@ -78,4 +78,3 @@ header{
     opacity: .4;
     box-shadow: none;
 }
-

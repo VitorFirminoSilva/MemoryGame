@@ -1,18 +1,43 @@
-@keyframes login{
-    100%{
+@keyframes login {
+    100% {
         transform: translateX(2px);
         opacity: 0;
     }
 }
 
-@keyframes card_theme{
+@keyframes card_theme {
 
-    10%{
+    10% {
         transform: translateX(-10px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
         opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animateexit{
+    from {
+        top: 0;
+        opacity: 1
+    }
+
+    to {
+        top: -300px;
+        opacity: 0
     }
 }

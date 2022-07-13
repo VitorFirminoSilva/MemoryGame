@@ -31,12 +31,37 @@ let str = "";
 
 let theme = "";
 
+const resetGame = () => {
+    firstCard = "";
+    secondCard = "";
+    lenghtGame = 0;
+    tryCards = 0;
+    seconds = 0;
+    minutes = 0;
+    str = "";
+    theme = "";
+
+    while (grid.firstChild) grid.firstChild.remove();
+
+    clearInterval(this.loop);
+}
+
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll(".disabled_card");
     
     if(disabledCards.length === lenghtGame){
-        console.log("Acabou as cartas!! em " + str );
+
         clearInterval(this.loop);
+
+        const modalPlayer = document.querySelector(".modal_player");
+        const modalTries = document.querySelector(".modal_tries");
+        const modalTimer = document.querySelector(".modal_timer");
+
+        modalPlayer.innerHTML = "Name:" + localStorage.getItem("player");
+        modalTries.innerHTML = "Tries: " + tryCards;
+        modalTimer.innerHTML = str;
+        modal.style.display = "flex";
+        
     }
 }
 
@@ -109,8 +134,6 @@ const loadGame = () => {
 
     lenghtGame = duplicatedArray.length;
 
-    console.log(lenghtGame);
-
     duplicatedArray.sort(() => Math.random() - 0.5);
 
     duplicatedArray.forEach((element) =>{
@@ -157,5 +180,4 @@ const startGame = () => {
     startTimer();
     spanPlayer.innerHTML = "Name:" + playerName;
     spanTries.innerHTML = "Tries: " + tryCards;
-    
 }

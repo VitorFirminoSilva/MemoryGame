@@ -5,6 +5,7 @@
     --secundary-complement-color: ; */
 
     --light-grey-color: #eeee;
+    --opac-grey-color: rgba(238, 238, 238, 0.7);
 
     --light-color: #ffff;
     --grey-color: #646464;

@@ -4,16 +4,12 @@ const themes = [
     "desenhos",
     "sportCar",
     "animes",
-    "theme4"
 ]
 
 
 const selectionTheme = ({target}) => {
     const card = target.parentNode.querySelector(".face_card");
     const theme = card.getAttribute("data-theme");
-
-    console.log(theme);
-
     if(themes.includes(theme)){
         localStorage.setItem("theme", theme);
     }else{
@@ -25,7 +21,10 @@ const selectionTheme = ({target}) => {
     game.classList.remove("disabled");
 }
 
-console.log(theme_card);
+const returnTheme = () => {
+    selectTheme.classList.remove("disabled");
+    game.classList.add("disabled");
+}
 
 theme_card.forEach( element => {
     element.addEventListener("click", selectionTheme);

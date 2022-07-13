@@ -7,55 +7,86 @@
 
     <link rel="stylesheet" href="./css/color.css">
     <link rel="stylesheet" href="./css/reset.css">
+
+    <link rel="stylesheet" href="./css/animation.css">
+
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/theme.css">
     <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/modal.css">
 
     <link rel="stylesheet" href="./css/responsive.css">
-    <link rel="stylesheet" href="./css/animation.css">
+    
 
     <link rel="shortcut icon" href="./img/brain.png" type="image/x-icon">
     <title>Memory Game</title>
 </head>
 <body>
-    <section class="login">
-        <form class="login_form">
-            <div class="login_header">
-                <img src="./img/brain.png" alt="Brain icon">
-                <h1>Memory Game</h1>
-            
-            </div>
-            <input type="text" placeholder="Name" class="login_input">
-            <button type="submit" class="login_button" disabled>Play</button>
-        </form>
-    </section>
 
-    <section class="theme disabled">
-        <div class="themes_cards">
-            <div class="theme_card">
-                <div class="face_card desenhos" data-theme="desenhos"></div>
-                <div class="theme_text"><span>Desenhos</span></div>
-            </div>
-            <div class="theme_card">
-                <div class="face_card sportCar" data-theme="sportCar"></div>
-                <div class="theme_text"><span>Sport Cars</span></div>
-            </div>
-            <div class="theme_card">
-                <div class="face_card animes" data-theme="animes"></div>
-                <div class="theme_text"><span>Animes</span></div>
-            </div>
-        </div>
-    </section>
+    <noscript>
+        <span >O javascript e o css é primordial para o funcionamento do jogo</span>
+    </noscript>
+    <main>
+        <section class="login">
+            <form class="login_form">
+                <div class="login_header">
+                    <img src="./img/brain.png" alt="Brain icon">
+                    <h1>Memory Game</h1>
+                
+                </div>
+                <input type="text" placeholder="Name" class="login_input">
+                <button type="submit" class="login_button" disabled>Play</button>
+            </form>
+        </section>
 
-    <main class="game disabled">
-        <header>
-            <span class="player"></span>
-            <span class="tries"></span>
-            <span>Timer <span class="timer">00:00</span></span>
-        </header>
-        <div class="grid"></div>
-    </main>
+        <section class="theme disabled">
+            <div class="themes_cards">
+                <div class="theme_card">
+                    <div class="face_card desenhos" data-theme="desenhos"></div>
+                    <div class="theme_text"><span>Desenhos</span></div>
+                </div>
+                <div class="theme_card">
+                    <div class="face_card sportCar" data-theme="sportCar"></div>
+                    <div class="theme_text"><span>Sport Cars</span></div>
+                </div>
+                <div class="theme_card">
+                    <div class="face_card animes" data-theme="animes"></div>
+                    <div class="theme_text"><span>Animes</span></div>
+                </div>
+            </div>
+        </section>
 
+        <section class="game disabled">
+            <header>
+                <span class="player"></span>
+                <span class="tries"></span>
+                <span>Timer <span class="timer">00:00</span></span>
+            </header>
+
+            <div class="grid"></div>
+        </section>
+    </main>   
+
+    <div id="end_game" class="modal">
+        <!-- Modal content -->
+        <div class="modal_content modal_animation">
+            <div class="modal_header">
+              <h2>Congratulation, you won!!!</h2>
+              <span class="close_modal">&times;</span>
+            </div>
+            <div class="modal_body">
+                <span class="modal_player"></span>
+                <span class="modal_tries"></span>
+                <span>Timer <span class="modal_timer">00:00</span></span>
+            </div>
+            <div class="modal_footer">
+                <span class="reload_game"><span class="icon_reload">&#8635;</span>Reload Game</span>
+                <span class="change_theme"><span class="icon_change">&#8626;</span>Change Theme</span>
+            </div>
+          </div>
+    </div>
+        
+    <script src="./js/modal.js"></script>
     <script src="./js/game.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/selectTheme.js"></script>
