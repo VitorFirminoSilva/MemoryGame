@@ -1,5 +1,4 @@
 const modal = document.getElementById("end_game");
-const span = document.querySelector(".close_modal");
 const content = document.querySelector(".modal_animation");
 
 const reload = document.querySelector(".reload_game");
@@ -27,8 +26,6 @@ const changeTheme = () => {
     returnTheme();
     modalClose();
 }
-
-span.addEventListener("click", modalClose);
 
 reload.addEventListener("click", reloadGame);
 change.addEventListener("click", changeTheme);

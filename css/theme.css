@@ -27,7 +27,9 @@ section.theme.disabled{
     border-radius: 6px;
     transition: all 1s ease;
 
-    animation: card_theme .4s; 
+    animation-name: card_theme;
+    animation-duration: .4s;
+    animation-direction: alternate;
 }
 
 .theme_card:hover{
@@ -41,8 +43,7 @@ section.theme.disabled{
     background-position: center;
     backface-visibility: hidden; 
     border-radius: 6px;
-    transition: all 3s ease;
-    
+    transition: all 3s ease;  
 }
 
 .theme_text {
