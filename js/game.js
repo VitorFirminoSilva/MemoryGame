@@ -116,8 +116,8 @@ const createCard = (image) => {
     const front = createElement("div", "face front");
     const back = createElement("div", "face back");
 
-    front.style.backgroundImage = `url(./MemoryGame/img/${theme}/${image}.jpg)`;
-    back.style.backgroundImage = `url(./MemoryGame/img/${theme}/backcard.jpg)`;
+    front.style.backgroundImage = `url(./img/${theme}/${image}.jpg)`;
+    back.style.backgroundImage = `url(./img/${theme}/backcard.jpg)`;
     card.appendChild(front);
     card.appendChild(back);
 
@@ -175,7 +175,7 @@ const startGame = () => {
 
     const playerName = localStorage.getItem("player");
     theme = localStorage.getItem("theme");
-    main.style.backgroundImage = `url(./MemoryGame/img/${theme}/background.jpg)`;
+    main.style.backgroundImage = `url(./img/${theme}/background.jpg)`;
     loadGame();
     startTimer();
     spanPlayer.innerHTML = "Name:" + playerName;
